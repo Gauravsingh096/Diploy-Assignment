@@ -134,17 +134,43 @@
 }
 
 .image-section {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center; 
+  align-items: center;/* Centers the images horizontally */
+  gap: 20px; /* Add some space between the images */
+  flex-wrap: wrap; /* Makes sure the images wrap on smaller screens */
 }
 
+.girl-img{
+  width: 50%; /* Each image takes up 45% of the available space */
+  object-fit: contain;
+  height: auto;
+  max-width: 100%;
+  position: absolute;
+  top:8px;
+  left: 4px;
+  margin: 0 auto; /* Ensure images are centered within their container */
+}
+/* 
+.image-section {
+    flex: 1;
+    display: flex;
+    justify-content:flex-end;
+}
+.girl-img{
+  width: 50%;
+  object-fit: contain;
+  height:auto;
+}
+*/
 .girl-animation {
-    width: 800px;
+    width: auto;
     height: auto;
     max-width: 100%;
     object-fit: contain;
-}
+} 
 
 /* Tablet and Small Screens */
 @media (max-width: 991px) {
@@ -629,8 +655,7 @@ body {
 
   /* BANNER */
 
-
-.banner {
+  .banner {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -639,16 +664,16 @@ body {
     border-radius: 12px;
     width: 100%;
     max-width: 1200px;
-    margin: 128px;
-  }
-  
-  .text-container h3 {
+    margin: 128px auto; /* Center the banner */
+}
+
+.text-container h3 {
     font-size: 1.25rem;
     color: #2e7d32;
     margin: 0;
-  }
-  
-  .sales-button {
+}
+
+.sales-button {
     background-color: white;
     color: #2e7d32;
     border: none;
@@ -659,28 +684,306 @@ body {
     font-weight: bold;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease;
-  }
-  
-  .sales-button:hover {
+}
+
+.sales-button:hover {
     background-color: #f0f0f0;
+}
+
+/* Responsiveness for smaller screens */
+@media (max-width: 1024px) {
+    .banner {
+        flex-direction: column;
+        align-items: center; /* Center items */
+        padding: 30px;
+        margin: 64px auto; /* Adjust margin */
+    }
+
+    .text-container h3 {
+        font-size: 1.2rem; /* Slightly larger text */
+        text-align: center; /* Center the text */
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        padding: 20px;
+        margin: 32px auto; /* Adjust margin for small screens */
+    }
+
+    .sales-button {
+        width: 100%; /* Full width button */
+        margin-top: 15px; /* Increased spacing */
+    }
+
+    .text-container h3 {
+        font-size: 1.1rem; /* Smaller font for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 15px;
+        margin: 16px auto; /* Reduced margin */
+    }
+
+    .text-container h3 {
+        font-size: 1rem; /* Smaller font size for very small screens */
+    }
+
+    .sales-button {
+        padding: 10px; /* Adjust padding for smaller buttons */
+        font-size: 0.9rem; /* Smaller font for buttons */
+    }
+}
+/* --------------------------------------------------------------------------------------- */
+/* Revieww  Carousel....*/
+
+.review-card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  max-width: 300px;
+  margin: 0 auto; /* Center the cards */
+}
+
+.review-image {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.store-link {
+  color: green;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.rating {
+  color: orange;
+  font-size: 1.5em;
+}
+
+p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Swiper navigation buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; /* Ensure arrows are visible */
+  cursor: pointer; /* Change cursor to pointer */
+  padding: 10px;   /* Add padding for better clickability */
+  background-color: rgba(0,0,0,0.1); /* Optional: Add background for better visibility */
+  border-radius: 50%; /* Optional: Make the buttons circular */
+  position: absolute; /* Position them on top of the carousel */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Ensure buttons are above other elements */
+}
+
+.swiper-button-next {
+  right: 10px; /* Position the next button on the right */
+}
+
+.swiper-button-prev {
+  left: 10px; /* Position the prev button on the left */
+}
+
+/* Optionally, customize arrow size */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px;
+}
+
+/* Responsive styles */
+
+/* Small devices (phones, 640px and down) */
+@media (max-width: 640px) {
+  .review-card {
+    max-width: 90%; /* Allow more room on smaller screens */
+    padding: 15px;
   }
   
-  /* Responsiveness for smaller screens */
-  @media (max-width: 768px) {
-    .banner {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 15px;
-    }
-  
-    .sales-button {
-      margin-top: 10px;
-    }
-  
-    .text-container h3 {
-      font-size: 1.1rem;
-    }
+  h3 {
+    font-size: 1em; /* Make the font a bit smaller on mobile */
   }
 
-  /* --------------------------------------------------------------------------------------- */
-  /* Revieww */
+  .review-image {
+    width: 60px; /* Smaller image on mobile */
+    height: 60px;
+  }
+
+  .rating {
+    font-size: 1.2em; /* Adjust rating icon size */
+  }
+
+  p {
+    font-size: 0.85em;
+  }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (max-width: 768px) {
+  .review-card {
+    max-width: 80%; /* Adjust for tablet-sized screens */
+    padding: 20px;
+  }
+
+  h3 {
+    font-size: 1.1em; /* Slightly smaller font for tablets */
+  }
+
+  .review-image {
+    width: 70px; /* Slightly smaller image */
+    height: 70px;
+  }
+
+  .rating {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+/* Large devices (desktops, 1024px and up) */
+@media (min-width: 1024px) {
+  .review-card {
+    max-width: 300px; /* Default width on desktops */
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  .review-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .rating {
+    font-size: 1.5em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+/* ----------------------------------------------------------------------------- */
+/* footer====== */
+
+/* General Styling */
+.footer {
+  background-color: #f8f8f8;
+  padding: 40px 20px;
+  margin-top: 48px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.footer-column {
+  width: 22%;
+  margin-bottom: 20px;
+}
+
+.footer-column h3 {
+  color: #333;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #666;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-social {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.footer-social a {
+  color: #666;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: #333;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #eaeaea;
+}
+
+.footer-bottom p {
+  color: #666;
+  margin: 0;
+}
+
+/* Media Queries for Responsive Design */
+
+/* Tablet view */
+@media (max-width: 768px) {
+  .footer-column {
+    width: 45%;
+  }
+
+  .footer-social a {
+    font-size: 24px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .footer-social a {
+    font-size: 28px;
+    margin: 0 5px;
+  }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import GirlImage from '../assets/girlimg.png'; 
+import Girlimg1 from '../assets/custom11.png'; 
 import './header.css';
 
 const HeroSection = () => {
@@ -20,6 +21,7 @@ const HeroSection = () => {
         <p className="trusted-text">Trusted by over 8M sellers around the world</p>
       </div>
       <div className="image-section">
+      <img src={Girlimg1} alt="Girl pointing to a product" className="girl-img" />
         <img src={GirlImage} alt="Girl pointing to a product" className="girl-animation" />
       </div>
     </div>

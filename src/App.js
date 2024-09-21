@@ -6,6 +6,7 @@ import Products from './components/product';
 import Policies from './components/policies';
 import BusinessSection from './components/business';
 import ReviewCarousel from './components/carousel';
+import Footer from './components/footer';
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
       <Products/>
       <Policies/>
       <BusinessSection/>
-      {/* <ReviewCarousel/> */}
+      <ReviewCarousel/>
+      <Footer/>
 
     </div>
   );
