@@ -1,26 +1,21 @@
-import React from 'react';
-import { Navbar, Nav, Button, Dropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './header.css';
+import React from "react";
+import { Navbar, Nav, Button, Dropdown } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./header.css";
 import logos from "../assets/logo.jpg";
 
 const MyNavbar = () => {
   return (
     <Navbar bg="light" expand="lg" className="nav1">
-      {/* Adding a logo to the left side */}
       <Navbar.Brand href="#home">
-        <img 
-          src={logos}
-          alt="Logo"
-          className="nav-logo"    
-        />
+        <img src={logos} alt="Logo" className="nav-logo" />
       </Navbar.Brand>
-      
+
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="nav2">
           <Nav.Link href="#features">Features</Nav.Link>
-          
+
           {/* Services Dropdown */}
           <Dropdown className="nav-item-dropdown">
             <Dropdown.Toggle as="a" className="nav-link" href="#service">
@@ -60,7 +55,9 @@ const MyNavbar = () => {
         </Nav>
 
         <div className="d-flex">
-          <Button variant="outline-success" className="nav-btn">Login</Button>
+          <Button variant="outline-success" className="nav-btn">
+            Login
+          </Button>
           <Button variant="success">Signup</Button>
         </div>
       </Navbar.Collapse>
