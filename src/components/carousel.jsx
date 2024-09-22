@@ -13,6 +13,7 @@ const reviews = [
     storeLink: "#",
     image: require("../assets/user1.png"),
     rating: 4,
+    loading="lazy",
     review: "This has been an incredible service for us musicians...",
   },
   {
@@ -20,6 +21,7 @@ const reviews = [
     storeLink: "#",
     image: require("../assets/user2.png"),
     rating: 5,
+    loading="lazy",
     review: "We chose this because of their offerings...",
   },
   {
@@ -27,6 +29,7 @@ const reviews = [
     storeLink: "#",
     image: require("../assets/user3.png"),
     rating: 5,
+    loading="lazy",
     review: "We chose this because of their offerings...",
   },
   {
@@ -34,6 +37,7 @@ const reviews = [
     storeLink: "#",
     image: require("../assets/user1.png"),
     rating: 5,
+    loading="lazy",
     review: "We chose this because of their offerings...",
   },
   {
@@ -41,6 +45,7 @@ const reviews = [
     storeLink: "#",
     image: require("../assets/user2.png"),
     rating: 5,
+    loading="lazy",
     review: "We chose this because of their offerings...",
   },
   {
@@ -48,6 +53,7 @@ const reviews = [
     storeLink: "#",
     image: require("../assets/user3.png"),
     rating: 4,
+    loading="lazy",
     review: "This has been amazing for our business growth...",
   },
   {
@@ -55,6 +61,7 @@ const reviews = [
     storeLink: "#",
     image: require("../assets/user1.png"),
     rating: 4,
+    loading="lazy",
     review: "This has been amazing for our business growth...",
   },
 ];
