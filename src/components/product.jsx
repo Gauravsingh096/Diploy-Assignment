@@ -12,19 +12,19 @@ const Products = () => {
       </h1>
       <div className="product-grid">
         <a href="/path-to-cap" alt="Product 1">
-          <img src={cap} alt="Cap" />
+          <img src={cap} loading="lazy" alt="Cap" />
         </a>
         <a href="/path-to-shirt" alt="Product 2">
-          <img src={shirt} alt="Shirt" />
+          <img src={shirt} loading="lazy" alt="Shirt" />
         </a>
         <a href="/path-to-hat" alt="Product 3">
-          <img src={hat} alt="Hat" />
+          <img src={hat} loading="lazy" alt="Hat" />
         </a>
         <a href="/path-to-case" alt="Product 4">
-          <img src={case1} alt="Case" />
+          <img src={case1} loading="lazy" alt="Case" />
         </a>
         <a href="/path-to-hat-shirt" alt="Product 5">
-          <img src={hat_shirt} alt="Hat Shirt" />
+          <img src={hat_shirt} loading="lazy" alt="Hat Shirt" />
         </a>
       </div>
     </div>
