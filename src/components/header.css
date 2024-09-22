@@ -5,6 +5,9 @@
   align-items: center;
   justify-content: space-between;
   box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.1);
+  position: fixed;
+  width: 100vw;
+  z-index: 1000;
 
 }
 
@@ -54,6 +57,7 @@
   align-items: center;
   padding: 80px;
   background-color: #fff;
+  padding-top:10rem;
 }
 
 .text-section {
@@ -162,6 +166,7 @@
     flex-direction: column;
     text-align: center;
     padding: 30px;
+    padding-top: 10rem;
   }
 
   .text-section {
@@ -196,6 +201,7 @@
     flex-direction: column;
     text-align: center;
     padding: 20px;
+    padding-top: 10rem;
   }
 
   .text-section {
