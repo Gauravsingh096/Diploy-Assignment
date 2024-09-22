@@ -8,7 +8,7 @@ const Policies = () => {
   return (
     <div className="policies-container">
       <div className="policies-section">
-        <img src={image1} alt="Custom Products" className="policies-image" />
+        <img src={image1} loading="lazy" alt="Custom Products" className="policies-image" />
         <h1 className="policies-title">CREATE</h1>
         <p className="policies-subtitle">Custom Products</p>
         <p className="policies-description">
@@ -17,7 +17,7 @@ const Policies = () => {
         </p>
       </div>
       <div className="policies-section">
-        <img src={image2} alt="Sell on your terms" className="policies-image" />
+        <img src={image2} loading="lazy" alt="Sell on your terms" className="policies-image" />
         <h1 className="policies-title">SELL</h1>
         <p className="policies-subtitle">On Your Terms</p>
         <p className="policies-description">
@@ -25,7 +25,7 @@ const Policies = () => {
         </p>
       </div>
       <div className="policies-section">
-        <img src={image3} alt="Fulfillment" className="policies-image" />
+        <img src={image3} loading="lazy" alt="Fulfillment" className="policies-image" />
         <h1 className="policies-title">WE HANDLE</h1>
         <p className="policies-subtitle">Fulfillment</p>
         <p className="policies-description">
