@@ -9,18 +9,21 @@ const Features = () => {
     {
       image: profitImage,
       title: "Higher Profits",
+      loading="lazy",
       description:
         "You earn more with our competitive pricing model, which guarantees higher margins and better returns on your investment.",
     },
     {
       image: scalingImage,
       title: "Robust Scaling",
+      loading="lazy",
       description:
         "We handle production and logistics, ensuring smooth scaling of your business without the need for manual interventions.",
     },
     {
       image: selectionImage,
       title: "Best Selection",
+      loading="lazy",
       description:
         "Choose from a wide variety of products curated to meet your customers needs, ensuring quality and satisfaction.",
     },
